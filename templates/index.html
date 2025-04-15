@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <ul class="navbar-elements">
+            <li class="navbar-element home"><a href="{{ url_for('home')}}">Home</a></li>
+            <li class="navbar-element"><a href="{{ url_for('add_book') }}">Add a Book</a></li>
+            <li class="navbar-element"><a href="{{ url_for('get_books', user_id='user001') }}">My Books</a></li>
+        </ul>
+    </div>
+    <h1>Welcome to the Book Tracker!</h1>
+</body>
+</html>

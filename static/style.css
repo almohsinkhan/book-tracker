@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 10pc;
+}
+
+
+label, input, select, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #ffffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+/* List inside navbar */
+.navbar-elements {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+
+/* List items */
+.navbar-element {
+    margin-right: 20px;
+}
+
+/* Links */
+.navbar-element a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 2pc;
+}
+
+/* Hover effect */
+.navbar-element a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.logo {
+    height: 100px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/* Working on form */
+form {
+    margin: 25px 50px 75px 100px;
+}
+
