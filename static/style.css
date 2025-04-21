@@ -2,14 +2,57 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
     padding: 20px;
+    background-color: #f5e503;
 }
+
+/* Form */
+.form-container {
+    width: 500px;                 /* Smaller width */
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
 
 h1 {
     color: #2c3e50;
     text-align: center;
     font-size: 10pc;
 }
-
 
 label, input, select, textarea {
     display: block;
@@ -30,52 +73,78 @@ button:hover {
 
 /* Navbar container */
 .navbar {
-    background-color: #ffffff;
-    height: 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+/* Navbar sections */
+.navbar-left,
+.navbar-center,
+.navbar-right {
     display: flex;
     align-items: center;
 }
 
-/* List inside navbar */
-.navbar-elements {
+/* Logo styling */
+.logo {
+    height: 170px;
+    margin-right: 10px;
+}
+
+/* Center navbar links */
+.navbar-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-center .navbar-elements {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; 
 }
 
-
-/* List items */
 .navbar-element {
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
-/* Links */
 .navbar-element a {
-    display: block;
-    padding: 10px 15px;
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-size: 2pc;
+    font-size: 25px;
+    padding: 10px 15px;
 }
 
-/* Hover effect */
 .navbar-element a:hover {
     background-color: #f0f0f0;
     border-radius: 5px;
 }
 
-.logo {
-    height: 100px;
-    vertical-align: middle;
-    margin-right: 10px;
+/* Right section (Sign in/Register) */
+.navbar-right {
+    gap: 15px;
 }
 
-
-/* Working on form */
-form {
-    margin: 25px 50px 75px 100px;
+.auth-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
+.auth-btn:hover {
+    background-color: #2980b9;
+}
+
+.add-book{
+    display: block;
+    position: absolute;
+    left: 40%;
+    border: #000000  ;
+}

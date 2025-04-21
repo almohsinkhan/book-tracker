@@ -8,13 +8,23 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
-        <ul class="navbar-elements">
-            <li class="navbar-element home"><a href="{{ url_for('home')}}">Home</a></li>
-            <li class="navbar-element"><a href="{{ url_for('add_book') }}">Add a Book</a></li>
-            <li class="navbar-element"><a href="{{ url_for('get_books', user_id='user001') }}">My Books</a></li>
-        </ul>
-    </div>
+        <div class="navbar-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        </div>
+    
+        <div class="navbar-center">
+            <ul class="navbar-elements">
+                <li class="navbar-element"><a href="{{ url_for('home')}}">Home</a></li>
+                <li class="navbar-element"><a href="{{ url_for('add_book') }}">Add a Book</a></li>
+                <li class="navbar-element"><a href="{{ url_for('get_books', user_id='user001') }}">My Books</a></li>
+            </ul>
+        </div>
+    
+        <div class="navbar-right">
+            <a href="#" class="auth-btn">Sign In</a>
+            <a href="#" class="auth-btn">Register</a>
+        </div>
+    </div>    
     <h1>My Books</h1>
     <ul>
         {% for book in books %}

@@ -8,38 +8,34 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
-        <ul class="navbar-elements">
-            <li class="navbar-element home"><a href="{{ url_for('home')}}">Home</a></li>
-            <li class="navbar-element"><a href="{{ url_for('add_book') }}">Add a Book</a></li>
-            <li class="navbar-element"><a href="{{ url_for('get_books', user_id='user001') }}">My Books</a></li>
-        </ul>
-    </div>
+        <div class="navbar-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        </div>
+    
+        <div class="navbar-center">
+            <ul class="navbar-elements">
+                <li class="navbar-element"><a href="{{ url_for('home')}}">Home</a></li>
+                <li class="navbar-element"><a href="{{ url_for('add_book') }}">Add a Book</a></li>
+                <li class="navbar-element"><a href="{{ url_for('get_books', user_id='user001') }}">My Books</a></li>
+            </ul>
+        </div>
+    
+        <div class="navbar-right">
+            <a href="#" class="auth-btn">Sign In</a>
+            <a href="#" class="auth-btn">Register</a>
+        </div>
+    </div>    
     <h1>Add a New Book</h1>
-    <form  method="POST">
-        <label for="user_id">User ID:</label>
-        <input type="text" name="user_id" required><br>
-
-        <label for="title">Title:</label>
-        <input type="text" name="title" required><br>
-
-        <label for="author">Author:</label>
-        <input type="text" name="author" required><br>
-
-        <label for="current_page">Current Page:</label>
-        <input type="number" name="current_page" required><br>
-
-        <label for="status">Status:</label>
-        <select name="status">
-            <option value="Currently Reading">Currently Reading</option>
-            <option value="Finished">Finished</option>
-            <option value="Want to Read">Want to Read</option>
-        </select><br>
-
-        <label for="notes">Notes:</label>
-        <textarea name="notes"></textarea><br>
-
-        <button type="submit">Add Book</button>
-    </form>
+    <div class="form-container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>{{ form.title.label }} {{ form.title(size=40 ) }}</div>
+            <div>{{ form.author.label }} {{ form.author(size=32) }}</div>
+            <div>{{ form.current_page.label }} {{ form.current_page() }}</div>
+            <div>{{ form.status.label }} {{ form.status() }}</div>
+            <div>{{ form.notes.label }} {{ form.notes(rows=4, cols=32) }}</div>
+            <div><button type="submit">Add</button></div>
+        </form>
+    </div>
 </body>
 </html>
